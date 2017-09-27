@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactSimple from './react-simple.js';
+import ReactSimple from './ReactBasicsStatelessFunctional.js';
 
 ReactDOM.render(
   <ReactSimple/>,
