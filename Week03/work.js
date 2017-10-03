@@ -10,17 +10,23 @@ const bar = () => {
 
 const Qux = class Qux {
 	say() {
-		console/log('Que');
+		console.log('Que');
 	}
-}
+};
 
 foo();
 bar();
+let q = new Qux();
+q.say();
 
 //create a new class called calculator
 //give it a method called add(a,b) to return sum of a and b
 class Calculator {
 	add(a,b) {
-		return a+b;
+		console.log(a + '+' + b + ' = ' + (a+b));
 	}
-}
+};
+
+let calc = new Calculator();
+calc.add(7,3);
+
