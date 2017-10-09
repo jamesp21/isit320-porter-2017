@@ -7,8 +7,8 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            file: 'Get Nine Result will be placed here.',
-            foo: 'waiting for server'
+            file: 'unknown',
+            foo: 'waiting'
         };
     }
 
