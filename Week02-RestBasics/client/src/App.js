@@ -36,7 +36,10 @@ class App extends Component {
                 </div>
 
                 <p className="App-intro">
-                    state: {this.state.foo} file: {this.state.file}
+                    state: {this.state.foo}
+                </p>
+                <p className="App-intro">
+                    file: {this.state.file}
                 </p>
                 <button onClick={this.bar}>Bar</button>
             </div>
