@@ -15,4 +15,16 @@ router.get('/foo', function (req, res, next) {
     res.send({config: foo.getElvenImages()});
 });
 
+router.get('/first-word', function(request, response, next) { 'use strict';
+    console.log(req.query);
+    try {
+        // Now call elfUtils with the sentence passed in the query.
+        // Use Response.send to return the result.
+        // Here is one way to handle an error if it occurs:
+    } catch(e) {
+        console.log(e);
+        res.status(500).send(e)
+    }
+});
+
 module.exports = router;
