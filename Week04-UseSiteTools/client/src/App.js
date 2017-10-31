@@ -7,46 +7,13 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            homeDirectory: 'Unknown',
-            firstWord: 'Unknown',
-            userInput: 'Unknown'
+            baseDir: 'Get Nine Result wikk be Placed Here',
+            name: 'Unknown',
+            cloudPath: 'Unknown'
         };
-        this.homeDirectory = this.homeDirectory.bind(this);
-        this.firstWordChange = this.firstWordChange.bind(this);
-        this.firstWord = this.firstWord.bind(this);
+
 
         //this.bar = this.bar.bind(this); if i dont use the arrow syntax, i would need this
-    }
-
-    firstWordChange(event) {
-        console.log('firstWord:', event.target.value);
-        this.setState({userInput: event.target.value})
-    };
-
-    getQuery() {
-        const params = {sentence: this.state.userInput};
-        const encodeUri = encodeURIComponent;
-        let query = Object.keys(params)
-            .map(key => encodeUri(key) + '=' + encodeUri(params[key]))
-            .join('&');
-        return query;
-    };
-
-    firstWord() {
-        const that = this;
-        const query = '/first-word?' + this.getQuery();
-        console.log(query);
-        fetch(query)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(json) {
-                console.log('parsed json', json);
-                that.setState({ firstWord: json.firstWord });
-            })
-            .catch(function(ex) {
-                console.log('parsing failed', ex);
-            });
     }
 
     bar = () => {//this arrow syntax binds "this.bar" automatically
@@ -57,7 +24,10 @@ class App extends Component {
             })
             .then(function (json) {
                 console.log('parsed json', json);
-                that.setState({baseDir: json.config[1].baseDir});
+                that.setState({
+					baseDir: json.config[1].baseDir,
+					name: json.config[1].name,
+					cloudPath: json.config[1].cloudPath});
             })
             .catch(function (ex) {
                 console.log('parsing failed', ex);
@@ -75,9 +45,15 @@ class App extends Component {
                 <p className="App-intro">
                     baseDir: {this.state.baseDir}
                 </p>
-                <button onClick={this.bar}>Bar</button>
                 
-                <p>word change: <input type="text" onChange={this.firstWordChange} placeholder='Enter multi-word sentence.' />
+                <p className="App-intro">
+                    name: {this.state.name}
+                </p>
+                
+                <p className="App-intro">
+                    cloudPath: {this.state.cloudPath}
+                </p>
+                <button onClick={this.bar}>Bar</button>
                 </p>
             </div>
         );
