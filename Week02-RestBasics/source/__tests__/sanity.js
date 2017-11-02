@@ -10,8 +10,8 @@ configure({adapter: new Adapter()});
 import jQuery from 'jquery';
 global.jQuery = jQuery;
 global.$ = jQuery;
-
-import raf from '../temp-poly-fills';
+import '../temp-poly-fills';
+//import raf from '../temp-poly-fills';
 
 describe('WebCrafts Sanity Test', function() {
 
