@@ -10,9 +10,11 @@ class App extends Component {
             file: 'unknown',
             foo: 'waiting'
         };
+        this.bar = this.bar.bind(this);
+        this.getFile = this.getFile.bind(this);
     }
 
-    bar = () => {
+    bar() {
         const that = this;
         fetch('/api/foo')
             .then(function(response) {
@@ -27,7 +29,7 @@ class App extends Component {
             });
     };
 
-    getFile = () => {
+    getFile() {
         console.log('getFile called.');
         this.setState({file: 'url-file.js'});
     };
