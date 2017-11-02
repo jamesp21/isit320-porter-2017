@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './CallsitCode.js',
+    entry: './source/CallsitCode.js',
     output: {path: __dirname, filename: './public/javascripts/bundle.js'},
     module: {
         loaders: [
