@@ -54,7 +54,6 @@ class App extends Component {
                     cloudPath: {this.state.cloudPath}
                 </p>
                 <button onClick={this.bar}>Bar</button>
-                </p>
             </div>
         );
     }

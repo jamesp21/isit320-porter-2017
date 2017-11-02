@@ -41,10 +41,10 @@ class App extends Component {
                 </div>
 
                 <p className="App-intro">
-                    state: {this.state.foo}
+                    State: {this.state.foo}
                 </p>
                 <p className="App-intro">
-                    file: {this.state.file}
+                    File: {this.state.file}
                 </p>
                 <button id='getFile' onClick={this.getFile}>Get File</button>
             </div>
