@@ -1,0 +1,141 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    background-color: #f5f5f5;
+}
+a {
+    text-decoration: none;
+}
+li a {
+    text-decoration: underline;
+    color: #AAA;
+}
+.mdl-card {
+    overflow: visible;
+}
+.grecaptcha-logo {
+    background-color: white;
+}
+.mdl-grid {
+    max-width: 1024px;
+    margin: auto;
+}
+.mdl-layout__header-row {
+    padding: 0;
+}
+.quickstart-user-details-container, .user-details-container {
+    margin-top: 20px;
+    line-height: 25px;
+}
+#quickstart-sign-in-status, #sign-in-status {
+    font-weight: bold;
+}
+pre {
+    overflow-x: scroll;
+    line-height: 18px;
+}
+code {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+h3 {
+    background: url('firebase-logo.png') no-repeat;
+    background-size: 40px;
+    padding-left: 50px;
+    color: white;
+}
+#verification-code-form {
+    display:none;
+}
+#recaptcha-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#verify-code-button, #cancel-verify-code-button {
+    margin-left: 20px;
+}
+#sign-out-button {
+    display: none;
+}
+#sign-in-card {
+    z-index: 2;
+}
+
+@media screen {
+    body {
+        background: #ECEFF1;
+        color: rgba(0, 0, 0, 0.87);
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    #message {
+        background: white;
+        max-width: 360px;
+        margin: 100px auto 16px;
+        padding: 32px 24px;
+        border-radius: 3px;
+    }
+
+    #message h2 {
+        color: #ffa100;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 0 8px;
+    }
+
+    #message h1 {
+        font-size: 22px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 0 0 16px;
+    }
+
+    #message p {
+        line-height: 140%;
+        margin: 16px 0 24px;
+        font-size: 14px;
+    }
+
+    #message a {
+        display: block;
+        text-align: center;
+        background: #039be5;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        padding: 16px;
+        border-radius: 4px;
+    }
+
+    #message, #message a {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+        color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    body, #message { margin-top: 0; background: white; box-shadow: none; }
+    body { border-top: 16px solid #ffa100; }
+}

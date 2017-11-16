@@ -1,0 +1,16 @@
+mixin top(title)
+    .demo-layout.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+        header.mdl-layout__header.mdl-color-text--white.mdl-color--light-blue-700
+            .mdl-cell.mdl-cell--12-col.mdl-cell--12-col-tablet.mdl-grid
+                .mdl-layout__header-row.mdl-cell.mdl-cell--12-col.mdl-cell--12-col-tablet.mdl-cell--8-col-desktop
+                    a(href='/')
+                        h3 #{title}
+        block
+
+
+mixin signInBanner(signInText)
+    .mdl-cell.mdl-cell--12-col.mdl-cell--12-col-tablet.mdl-grid
+        .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-cell--12-col-tablet.mdl-cell--12-col-desktop
+            .mdl-card__title.mdl-color--light-blue-600.mdl-color-text--white
+                h2.mdl-card__title-text #{signInText}
+            block

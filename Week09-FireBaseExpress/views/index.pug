@@ -1,0 +1,14 @@
+extends layout
+include material-mixins
+include elf-fire-view-mixins
+
+block content
+
+  +top(title)
+    +signInBanner("Redirect Sign In")
+      +mainContent
+      div
+        +baseButtons
+        +serverButtons
+        +userInput
+        +userData
