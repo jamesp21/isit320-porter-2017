@@ -10,7 +10,6 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import AppConnect from './AppConnect';
 import TwoPartCode from './TwoPartCode';
-
 import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(spokesman);

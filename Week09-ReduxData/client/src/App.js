@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {connect} from 'react-redux';
 import ActionGrade from 'material-ui/svg-icons/action/grade'
 import Divider from 'material-ui/Divider';
 
@@ -29,7 +30,6 @@ var buttonStyle = {
     let App = ({baseDir, bootswatch, siteDirs, destinationDirs, bootswatchClick, destinationDirsClick, siteDirsClick}) => {
         const sites = {siteDirs};
 
-        render() {
             return (
                 <MuiThemeProvider>
                     <div className="App">
@@ -37,14 +37,14 @@ var buttonStyle = {
                             <img src={logo} className="App-logo" alt="logo" />
                             <h1 className="App-title">Welcome to React</h1>
                         </header>
-                        <DropDownMenu
+                       /* <DropDownMenu
                             value={this.state.value}
                             onChange={this.handleSiteDir}
                             style={styles.customWidth}
                             autoWidth={false}
                         >
                             {items}
-                        </DropDownMenu>
+                        </DropDownMenu>*/
                         <RaisedButton
                             style={buttonStyle}
                             primary={true}
@@ -66,8 +66,7 @@ var buttonStyle = {
                     </div>
                 </MuiThemeProvider>
             );
-        }
-    }
+    };
 /*}*/
 
 const mapStateToProps = (state) => {
@@ -77,7 +76,7 @@ const mapStateToProps = (state) => {
         siteDirs: state.siteDirs,
         destinationDirs: state.destinationDirs
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -91,7 +90,7 @@ const mapDispatchToProps = (dispatch) => {
             dipatch({type: 'DESTINATION_DIRS'})
         }
     }
-}
+};
 
 App = connect (
     mapDispatchToProps,

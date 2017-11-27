@@ -1,3 +1,6 @@
+import getConfig from './get-config';
+const state = getConfig();
+
 let stateInit = {
     baseDir: "Unknown",
     siteDirs: ["Unknown"],
@@ -5,7 +8,10 @@ let stateInit = {
     destinationDirs: ["Unknown"]
 }
 
-const configReducer = (state = stateInit, action) => {
+
+
+//const configReducer = (state = stateInit, action) => {
+const configReducer = (state = state, action) => {
     switch (action.type) {
         case 'ALL':
             const user = action.users.calvert;
