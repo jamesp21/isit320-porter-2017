@@ -1,0 +1,14 @@
+[Service]
+ExecStart=/usr/bin/node /home/ubuntu/bin/firebase-express/bin/www
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=firebase-express
+User=ubuntu
+Group=ubuntu
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+
+
