@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo systemctl enable firebase-express
+sudo systemctl start firebase-express
