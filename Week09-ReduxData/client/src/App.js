@@ -11,22 +11,6 @@ var buttonStyle = {
     margin: '10px 10px 10px 0'
 };
 
-/*class App extends Component {
-
-    getConfig() {
-        const that = this;
-        fetch('getConfig')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (configSummary) {
-                //console.log('parsed json', JSON.stringify(configSummary, null, 4));
-                })
-            .catch(function (ex) {
-                console.log('parsing failed', ex);
-            });
-    }*/
-
     let App = ({baseDir, bootswatch, siteDirs, destinationDirs, bootswatchClick, destinationDirsClick, siteDirsClick}) => {
         const sites = {siteDirs};
 
@@ -37,14 +21,7 @@ var buttonStyle = {
                             <img src={logo} className="App-logo" alt="logo" />
                             <h1 className="App-title">Welcome to React</h1>
                         </header>
-                       /* <DropDownMenu
-                            value={this.state.value}
-                            onChange={this.handleSiteDir}
-                            style={styles.customWidth}
-                            autoWidth={false}
-                        >
-                            {items}
-                        </DropDownMenu>*/
+
                         <RaisedButton
                             style={buttonStyle}
                             primary={true}
@@ -67,7 +44,6 @@ var buttonStyle = {
                 </MuiThemeProvider>
             );
     };
-/*}*/
 
 const mapStateToProps = (state) => {
     return{
@@ -81,13 +57,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         siteDirsClick: () => {
-            dipatch({type: 'SITE_DIRS'})
+            dispatch({type: 'SITE_DIRS'})
         },
         bootswatchClick: () => {
-            dipatch({type: 'BOOTSWATCH'})
+            dispatch({type: 'BOOTSWATCH'})
         },
         destinationDirsClick: () => {
-            dipatch({type: 'DESTINATION_DIRS'})
+            dispatch({type: 'DESTINATION_DIRS'})
         }
     }
 };

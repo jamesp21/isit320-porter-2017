@@ -6,9 +6,9 @@ let stateInit = {
     siteDirs: ["Unknown"],
     bootswatch: "Unknown",
     destinationDirs: ["Unknown"]
-}
+};
 
-
+//which one
 
 //const configReducer = (state = stateInit, action) => {
 const configReducer = (state = state, action) => {
@@ -42,4 +42,6 @@ const configReducer = (state = state, action) => {
         default:
         return state;
     }
-}
+};
+
+export default configReducer;
